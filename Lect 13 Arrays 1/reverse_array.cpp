@@ -19,12 +19,15 @@ using namespace std;
 vector<int> reverse(vector<int> &v)
 {
     int n = v.size();
-    int i = 0;
-    int j = n - 1;
+    int i = 0;     // starting
+    int j = n - 1; // ending
 
     while (i < j)
     {
-        swap(v[i], v[j]);
+        swap(v[i], v[j]); // 1st and last
+        // 2nd and 2nd last
+        // 3rd and 3rd last
+        //.....
         i++;
         j--;
     }
