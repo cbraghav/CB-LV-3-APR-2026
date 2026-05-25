@@ -90,17 +90,6 @@ bool search(vector<int> &v, int k)
 // SC : O(1)
 int missing_number(vector<int> &v, int n)
 {
-    int xr = 0;
-    for (int i = 0; i <= n; i++)
-    {
-        xr = xr ^ i;
-    }
-    for (auto ele : v)
-    {
-        xr = xr ^ ele;
-    }
-
-    return xr;
 }
 
 int32_t main()
