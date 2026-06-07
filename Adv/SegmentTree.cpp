@@ -167,6 +167,16 @@ public:
         // segTreeArr[idx] = segTreeArr[2 * idx + 1] + segTreeArr[2 * idx + 2];
         segTreeArr[idx] = max(segTreeArr[2 * idx + 1], segTreeArr[2 * idx + 2]);
     }
+
+    // TC O(N Log N)
+    void rangeUpdate(vector<int> &nums, int L, int R, int val)
+    {
+        int n = nums.size();
+        for (int i = L; i <= R; i++)
+        {
+            pointUpdate(nums, 0, 0, n - 1, i, val);
+        }
+    }
 };
 int32_t main()
 {
